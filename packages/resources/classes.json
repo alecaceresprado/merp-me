@@ -1,0 +1,290 @@
+[
+  {
+    "className": "Guerrero",
+    "armor": {
+      "lvlUpArmorRanks": 3,
+      "noArmor": 0,
+      "leather": 0,
+      "hardenedLeather": 0,
+      "mail": 0,
+      "plates": 0
+    },
+    "weapons": {
+      "lvlUpWeaponsRanks": 5,
+      "edge": 3,
+      "blunt": 3,
+      "twoHanded": 3,
+      "throw": 3,
+      "aim": 3,
+      "pole": 3
+    },
+    "general": {
+      "lvlUpGeneralRanks": 2,
+      "climb": 1,
+      "mount": 1,
+      "swim": 1,
+      "trace": 1
+    },
+    "survival": {
+      "lvlUpSurvivalRanks": 2,
+      "ambus": 0,
+      "hide": 0,
+      "lockPick": 0,
+      "trapDismantle": 0
+    },
+    "magic": {
+      "lvlUpMagicRanks": 0,
+      "lvlUpNewSpellsRanks": 0,
+      "readRunes": 0,
+      "useObject": 0,
+      "spellAim": 0,
+      "baseSpellPower": 0
+    },
+    "other": {
+      "sight": 0,
+      "health": 2,
+      "lvlUpHealthRanks": 3,
+      "Idiomas": 0
+    }
+  },
+  {
+    "className": "Explorador",
+    "armor": {
+      "lvlUpArmorRanks": 1,
+      "noArmor": 0,
+      "leather": 0,
+      "hardenedLeather": 0,
+      "mail": 0,
+      "plates": 0
+    },
+    "weapons": {
+      "lvlUpWeaponsRanks": 3,
+      "edge": 1,
+      "blunt": 1,
+      "twoHanded": 1,
+      "throw": 1,
+      "aim": 1,
+      "pole": 1
+    },
+    "general": {
+      "lvlUpGeneralRanks": 3,
+      "climb": 1,
+      "mount": 1,
+      "swim": 1,
+      "trace": 1
+    },
+    "survival": {
+      "lvlUpSurvivalRanks": 5,
+      "ambus": 0,
+      "hide": 2,
+      "lockPick": 2,
+      "trapDismantle": 2
+    },
+    "magic": {
+      "lvlUpMagicRanks": 0,
+      "lvlUpNewSpellsRanks": 0,
+      "readRunes": 0,
+      "useObject": 0,
+      "spellAim": 0,
+      "baseSpellPower": 0
+    },
+    "other": {
+      "sight": 3,
+      "health": 0,
+      "lvlUpHealthRanks": 2,
+      "Idiomas": 1
+    }
+  },
+  {
+    "className": "Montaraz",
+    "armor": {
+      "lvlUpArmorRanks": 2,
+      "noArmor": 0,
+      "leather": 0,
+      "hardenedLeather": 0,
+      "mail": 0,
+      "plates": 0
+    },
+    "weapons": {
+      "lvlUpWeaponsRanks": 3,
+      "edge": 2,
+      "blunt": 2,
+      "twoHanded": 2,
+      "throw": 2,
+      "aim": 2,
+      "pole": 2
+    },
+    "general": {
+      "lvlUpGeneralRanks": 4,
+      "climb": 3,
+      "mount": 3,
+      "swim": 3,
+      "trace": 3
+    },
+    "survival": {
+      "lvlUpSurvivalRanks": 2,
+      "ambus": 0,
+      "hide": 2,
+      "lockPick": 0,
+      "trapDismantle": 0
+    },
+    "magic": {
+      "lvlUpMagicRanks": 0,
+      "lvlUpNewSpellsRanks": 1,
+      "readRunes": 0,
+      "useObject": 0,
+      "spellAim": 0,
+      "baseSpellPower": 0
+    },
+    "other": {
+      "sight": 2,
+      "health": 0,
+      "lvlUpHealthRanks": 2,
+      "Idiomas": 1
+    }
+  },
+  {
+    "className": "Mago",
+    "armor": {
+      "lvlUpArmorRanks": 0,
+      "noArmor": 0,
+      "leather": 0,
+      "hardenedLeather": 0,
+      "mail": 0,
+      "plates": 0
+    },
+    "weapons": {
+      "lvlUpWeaponsRanks": 0,
+      "edge": 0,
+      "blunt": 0,
+      "twoHanded": 0,
+      "throw": 0,
+      "aim": 0,
+      "pole": 0
+    },
+    "general": {
+      "lvlUpGeneralRanks": 2,
+      "climb": 0,
+      "mount": 0,
+      "swim": 0,
+      "trace": 0
+    },
+    "survival": {
+      "lvlUpSurvivalRanks": 0,
+      "ambus": 0,
+      "hide": 0,
+      "lockPick": 0,
+      "trapDismantle": 0
+    },
+    "magic": {
+      "lvlUpMagicRanks": 5,
+      "lvlUpNewSpellsRanks": 5,
+      "readRunes": 2,
+      "useObject": 2,
+      "spellAim": 3,
+      "baseSpellPower": 2
+    },
+    "other": {
+      "sight": 0,
+      "health": 0,
+      "lvlUpHealthRanks": 1,
+      "Idiomas": 2
+    }
+  },
+  {
+    "className": "Animista",
+    "armor": {
+      "lvlUpArmorRanks": 1,
+      "noArmor": 0,
+      "leather": 0,
+      "hardenedLeather": 0,
+      "mail": 0,
+      "plates": 0
+    },
+    "weapons": {
+      "lvlUpWeaponsRanks": 1,
+      "edge": 0,
+      "blunt": 0,
+      "twoHanded": 0,
+      "throw": 0,
+      "aim": 0,
+      "pole": 0
+    },
+    "general": {
+      "lvlUpGeneralRanks": 2,
+      "climb": 1,
+      "mount": 1,
+      "swim": 1,
+      "trace": 1
+    },
+    "survival": {
+      "lvlUpSurvivalRanks": 1,
+      "ambus": 0,
+      "hide": 0,
+      "lockPick": 0,
+      "trapDismantle": 0
+    },
+    "magic": {
+      "lvlUpMagicRanks": 2,
+      "lvlUpNewSpellsRanks": 5,
+      "readRunes": 1,
+      "useObject": 1,
+      "spellAim": 2,
+      "baseSpellPower": 2
+    },
+    "other": {
+      "sight": 1,
+      "health": 0,
+      "lvlUpHealthRanks": 1,
+      "Idiomas": 2
+    }
+  },
+  {
+    "className": "Bardo",
+    "armor": {
+      "lvlUpArmorRanks": 0,
+      "noArmor": 0,
+      "leather": 0,
+      "hardenedLeather": 0,
+      "mail": 0,
+      "plates": 0
+    },
+    "weapons": {
+      "lvlUpWeaponsRanks": 2,
+      "edge": 1,
+      "blunt": 1,
+      "twoHanded": 1,
+      "throw": 1,
+      "aim": 1,
+      "pole": 1
+    },
+    "general": {
+      "lvlUpGeneralRanks": 2,
+      "climb": 1,
+      "mount": 1,
+      "swim": 1,
+      "trace": 1
+    },
+    "survival": {
+      "lvlUpSurvivalRanks": 2,
+      "ambus": 0,
+      "hide": 1,
+      "lockPick": 1,
+      "trapDismantle": 1
+    },
+    "magic": {
+      "lvlUpMagicRanks": 3,
+      "lvlUpNewSpellsRanks": 2,
+      "readRunes": 1,
+      "useObject": 1,
+      "spellAim": 1,
+      "baseSpellPower": 1
+    },
+    "other": {
+      "sight": 1,
+      "health": 0,
+      "lvlUpHealthRanks": 1,
+      "Idiomas": 3
+    }
+  }
+]

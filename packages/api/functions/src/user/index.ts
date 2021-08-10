@@ -1,8 +1,8 @@
 
 import {Router} from "express";
 import firebase from "firebase";
-import * as admin from "firebase-admin";
 
+import {db} from "../firebaseHelpers";
 import {loginDetails, signupDetails} from "./types";
 import {validateLoginData, validateSignupData} from "./validations";
 
@@ -12,7 +12,7 @@ const router: Router = Router();
 router.get("/:userId", (request, response) => {
   const userId = request.params.userId;
   console.log("GET USER:: Started");
-  admin.firestore().doc(`/users/${userId}`).get()
+  db.doc(`/users/${userId}`).get()
     .then((res) => {
       const user = res.data();
       if (user) {
@@ -47,7 +47,7 @@ router.post("/", (request, response) => {
     .createUserWithEmailAndPassword(newUser.email, newUser.password)
     .then((data) => {
       createdUser = data.user;
-      return admin.firestore()
+      return db
         .doc(`/users/${createdUser?.uid}`)
         .set({
           userName: request.body.userName,

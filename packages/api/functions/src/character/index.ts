@@ -1,14 +1,14 @@
 
 import {Router, Request, Response} from "express";
-import * as admin from "firebase-admin";
+import {db} from "../firebaseHelpers";
 
 
 const router: Router = Router();
 
 router.get("/",
   (request, response) => {
-    console.log("authMiddleware:: Started");
-    admin.firestore().collection("characters").get()
+    console.log("GET CHARACTERS:: Started");
+    db.collection("characters").get()
       .then((data) => {
         const characters: any = [];
         data.forEach((doc) => {
@@ -17,6 +17,7 @@ router.get("/",
             ...doc.data(),
           });
         });
+        console.log("GET CHARACTERS:: Complete");
         return response.json(characters);
       })
       .catch(console.error);
@@ -25,13 +26,15 @@ router.get("/",
 
 router.post("/",
   (request: Request, response: Response) => {
+    console.log("CREATE CHARACTER:: Started");
     const character = {
       ...request.body,
       createdAt: new Date().toISOString(),
       owner: (request as any).user.userId,
     };
-    admin.firestore().collection("characters").add(character)
+    db.collection("characters").add(character)
       .then((char) => {
+        console.log("CREATE CHARACTER:: Completed");
         return response
           .status(201)
           .json({message: `Document: ${char.id} created`});
@@ -44,11 +47,13 @@ router.post("/",
 
 router.get("/:id",
   (request, response) => {
+    console.log("GET CHARACTER:: Started");
     const characterId = request.params.id;
-    admin.firestore().collection("characters").doc(characterId).get()
+    db.collection("characters").doc(characterId).get()
       .then((res) => {
         const character = res.data();
         if (character) {
+          console.log("GET CHARACTER:: Completed");
           return response.json(character);
         } else {
           return response.status(404).json({message: "character not found"});
@@ -62,13 +67,15 @@ router.get("/:id",
 
 router.put("/:id",
   (request, response) => {
+    console.log("UPDATE CHARACTER:: Started");
     const characterId = request.params.id;
     const character = {
       ...request.body,
       lastUpdate: new Date().toISOString(),
     };
-    admin.firestore().doc(`/characters/${characterId}`).update(character)
+    db.doc(`/characters/${characterId}`).update(character)
       .then(() => {
+        console.log("UPDATE CHARACTER:: Completed");
         return response
           .status(200)
           .json({message: `Document: ${characterId} updated`});
@@ -81,9 +88,11 @@ router.put("/:id",
 
 router.delete("/:id",
   (request, response) => {
+    console.log("DELETE CHARACTER:: Started");
     const characterId = request.params.id;
-    admin.firestore().collection("characters").doc(characterId).delete()
+    db.collection("characters").doc(characterId).delete()
       .then(() => {
+        console.log("DELETE CHARACTER:: Completed");
         return response
           .status(200)
           .json({message: `Document: ${characterId} deleted`});

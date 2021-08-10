@@ -1,0 +1,1684 @@
+[
+  {
+    "raceName": "Enano",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 1,
+        "mail": 3,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 4,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 0,
+        "pole": 0
+      },
+      "general": {
+        "climb": 1,
+        "mount": 0,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 1,
+        "trapDismantle": 1
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 3,
+        "sight": 2
+      }
+    },
+    "startSpellChance": 3,
+    "languages": 4,
+    "historyPoints": 4,
+    "stats": {
+      "STR": 5,
+      "AGI": -5,
+      "CON": 15,
+      "INT": 0,
+      "I": -5,
+      "PRE": -5
+    },
+    "resistances": {
+      "ESE": 40,
+      "CAN": 0,
+      "VE": 10,
+      "ILL": 10
+    }
+  },
+  {
+    "raceName": "Umli",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 3,
+        "hardenedLeather": 3,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 3,
+        "twoHanded": 1,
+        "throw": 1,
+        "aim": 0,
+        "pole": 0
+      },
+      "general": {
+        "climb": 0,
+        "mount": 0,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 1,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 5,
+    "languages": 3,
+    "historyPoints": 4,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 10,
+      "INT": 0,
+      "I": -5,
+      "PRE": -5
+    },
+    "resistances": {
+      "ESE": 20,
+      "CAN": 0,
+      "VE": 5,
+      "ILL": 5
+    }
+  },
+  {
+    "raceName": "Elfos Noldor",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 0,
+        "aim": 1,
+        "pole": 0
+      },
+      "general": {
+        "climb": 0,
+        "mount": 1,
+        "swim": 2,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 2,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 2,
+        "useObject": 1,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 1,
+        "sight": 3
+      }
+    },
+    "startSpellChance": 40,
+    "languages": 10,
+    "historyPoints": 2,
+    "stats": {
+      "STR": 0,
+      "AGI": 15,
+      "CON": 10,
+      "INT": 5,
+      "I": 5,
+      "PRE": 15
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 10,
+      "ILL": 100
+    }
+  },
+  {
+    "raceName": "Elfos Sindar",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 0,
+        "aim": 2,
+        "pole": 0
+      },
+      "general": {
+        "climb": 1,
+        "mount": 1,
+        "swim": 2,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 3,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 1,
+        "useObject": 1,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 1,
+        "sight": 3
+      }
+    },
+    "startSpellChance": 30,
+    "languages": 8,
+    "historyPoints": 3,
+    "stats": {
+      "STR": 0,
+      "AGI": 10,
+      "CON": 5,
+      "INT": 0,
+      "I": 5,
+      "PRE": 10
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 10,
+      "ILL": 100
+    }
+  },
+  {
+    "raceName": "Elfos Silvano",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 0,
+        "aim": 3,
+        "pole": 0
+      },
+      "general": {
+        "climb": 2,
+        "mount": 1,
+        "swim": 3,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 4,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 1,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 1,
+        "sight": 3
+      }
+    },
+    "startSpellChance": 20,
+    "languages": 6,
+    "historyPoints": 4,
+    "stats": {
+      "STR": 0,
+      "AGI": 10,
+      "CON": 0,
+      "INT": 0,
+      "I": 5,
+      "PRE": 5
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 10,
+      "ILL": 100
+    }
+  },
+  {
+    "raceName": "Medio Elfos",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 1,
+        "mail": 1,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 0,
+        "aim": 2,
+        "pole": 0
+      },
+      "general": {
+        "climb": 1,
+        "mount": 1,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 2,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 1,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 1,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 10,
+    "languages": 4,
+    "historyPoints": 3,
+    "stats": {
+      "STR": 5,
+      "AGI": 5,
+      "CON": 5,
+      "INT": 0,
+      "I": 0,
+      "PRE": 5
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 5,
+      "ILL": 50
+    }
+  },
+  {
+    "raceName": "Hobbit",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 2,
+        "aim": 2,
+        "pole": 0
+      },
+      "general": {
+        "climb": 2,
+        "mount": 0,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 5,
+        "lockPick": 1,
+        "trapDismantle": 1
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 4
+      }
+    },
+    "startSpellChance": 0,
+    "languages": 3,
+    "historyPoints": 5,
+    "stats": {
+      "STR": -20,
+      "AGI": 15,
+      "CON": 15,
+      "INT": 0,
+      "I": -5,
+      "PRE": -5
+    },
+    "resistances": {
+      "ESE": 50,
+      "CAN": 20,
+      "VE": 30,
+      "ILL": 15
+    }
+  },
+  {
+    "raceName": "Beórnidas",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 0,
+        "twoHanded": 1,
+        "throw": 1,
+        "aim": 0,
+        "pole": 2
+      },
+      "general": {
+        "climb": 2,
+        "mount": 0,
+        "swim": 2,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 4,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 3,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 3,
+    "languages": 3,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Núm. Negros",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 2,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 1,
+        "pole": 0
+      },
+      "general": {
+        "climb": 0,
+        "mount": 1,
+        "swim": 3,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 1,
+        "useObject": 1,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 10,
+    "languages": 6,
+    "historyPoints": 3,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 10,
+      "INT": 0,
+      "I": 0,
+      "PRE": 5
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 5,
+      "ILL": 5
+    }
+  },
+  {
+    "raceName": "Corsarios",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 2,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 2,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 1,
+        "pole": 0
+      },
+      "general": {
+        "climb": 0,
+        "mount": 0,
+        "swim": 5,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 5,
+    "languages": 5,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 10,
+      "INT": 0,
+      "I": 0,
+      "PRE": 5
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 5,
+      "ILL": 5
+    }
+  },
+  {
+    "raceName": "Dorwinrim",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 1,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 1,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 1,
+        "pole": 1
+      },
+      "general": {
+        "climb": 0,
+        "mount": 2,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 1,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 10,
+    "languages": 5,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Dúnedain",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 1,
+        "mail": 2,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 2,
+        "blunt": 0,
+        "twoHanded": 1,
+        "throw": 0,
+        "aim": 1,
+        "pole": 1
+      },
+      "general": {
+        "climb": 0,
+        "mount": 1,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 1,
+        "useObject": 1,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 3,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 10,
+    "languages": 6,
+    "historyPoints": 3,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 10,
+      "INT": 0,
+      "I": 0,
+      "PRE": 5
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 5,
+      "ILL": 5
+    }
+  },
+  {
+    "raceName": "Dunledinos",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 1,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 1,
+        "twoHanded": 0,
+        "throw": 2,
+        "aim": 1,
+        "pole": 2
+      },
+      "general": {
+        "climb": 5,
+        "mount": 0,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 2,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 3,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 2,
+    "languages": 2,
+    "historyPoints": 4,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Hombres del Este",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 2,
+        "pole": 2
+      },
+      "general": {
+        "climb": 0,
+        "mount": 5,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 2,
+    "languages": 2,
+    "historyPoints": 4,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Haradrim del Norte",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 0,
+        "pole": 2
+      },
+      "general": {
+        "climb": 0,
+        "mount": 7,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 2,
+    "languages": 3,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Haradrim del Sur",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 0,
+        "pole": 2
+      },
+      "general": {
+        "climb": 0,
+        "mount": 7,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 2,
+    "languages": 3,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Lossoth",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 3,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 3,
+        "aim": 0,
+        "pole": 2
+      },
+      "general": {
+        "climb": 0,
+        "mount": 0,
+        "swim": 2,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 4,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 3,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 5,
+    "languages": 1,
+    "historyPoints": 4,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Rohirrim",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 1,
+        "mail": 2,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 2,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 0,
+        "aim": 1,
+        "pole": 1
+      },
+      "general": {
+        "climb": 0,
+        "mount": 8,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 3,
+    "languages": 4,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Campesinos",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 1,
+        "mail": 1,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 1,
+        "pole": 1
+      },
+      "general": {
+        "climb": 0,
+        "mount": 1,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 1,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 3,
+    "languages": 4,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Burgueses",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 0,
+        "aim": 1,
+        "pole": 0
+      },
+      "general": {
+        "climb": 0,
+        "mount": 0,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 1,
+        "useObject": 1,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 1,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 15,
+    "languages": 5,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Variags",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 2,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 1,
+        "pole": 1
+      },
+      "general": {
+        "climb": 0,
+        "mount": 4,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 1,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 5,
+    "languages": 3,
+    "historyPoints": 4,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "H. de los Bosques",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 1,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 1,
+        "pole": 1
+      },
+      "general": {
+        "climb": 3,
+        "mount": 0,
+        "swim": 1,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 4,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 3,
+    "languages": 2,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 0,
+      "INT": 0,
+      "I": 0,
+      "PRE": 0
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Woses",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 3,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 2,
+        "blunt": 0,
+        "twoHanded": 0,
+        "throw": 4,
+        "aim": 0,
+        "pole": 1
+      },
+      "general": {
+        "climb": 3,
+        "mount": 0,
+        "swim": 2,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 2,
+        "hide": 4,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 3,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 5,
+    "languages": 2,
+    "historyPoints": 5,
+    "stats": {
+      "STR": 0,
+      "AGI": 0,
+      "CON": 5,
+      "INT": 0,
+      "I": 0,
+      "PRE": -5
+    },
+    "resistances": {
+      "ESE": 20,
+      "CAN": 0,
+      "VE": 0,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Orcos",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 3,
+        "mail": 2,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 3,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 0,
+        "pole": 1
+      },
+      "general": {
+        "climb": 1,
+        "mount": 0,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 1,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 0,
+    "languages": 2,
+    "historyPoints": 2,
+    "stats": {
+      "STR": 5,
+      "AGI": -5,
+      "CON": 15,
+      "INT": -10,
+      "I": -10,
+      "PRE": -10
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 20,
+      "ILL": 5
+    }
+  },
+  {
+    "raceName": "Uruk-Hai",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 3,
+        "mail": 3,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 4,
+        "blunt": 1,
+        "twoHanded": 1,
+        "throw": 1,
+        "aim": 1,
+        "pole": 1
+      },
+      "general": {
+        "climb": 1,
+        "mount": 1,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 1,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 3,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 0,
+    "languages": 2,
+    "historyPoints": 2,
+    "stats": {
+      "STR": 10,
+      "AGI": 0,
+      "CON": 20,
+      "INT": 0,
+      "I": -5,
+      "PRE": -10
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 20,
+      "ILL": 5
+    }
+  },
+  {
+    "raceName": "Medio Orcos",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 3,
+        "mail": 1,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 3,
+        "twoHanded": 0,
+        "throw": 1,
+        "aim": 1,
+        "pole": 0
+      },
+      "general": {
+        "climb": 1,
+        "mount": 0,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 1,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 2,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 0,
+    "languages": 2,
+    "historyPoints": 3,
+    "stats": {
+      "STR": 5,
+      "AGI": 0,
+      "CON": 5,
+      "INT": 0,
+      "I": 0,
+      "PRE": -5
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 10,
+      "ILL": 0
+    }
+  },
+  {
+    "raceName": "Trolls",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 0,
+        "twoHanded": 3,
+        "throw": 1,
+        "aim": 0,
+        "pole": 0
+      },
+      "general": {
+        "climb": 1,
+        "mount": 0,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 5,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 0,
+    "languages": 2,
+    "historyPoints": 1,
+    "stats": {
+      "STR": 15,
+      "AGI": -10,
+      "CON": 15,
+      "INT": -15,
+      "I": -15,
+      "PRE": -10
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 30,
+      "ILL": 10
+    }
+  },
+  {
+    "raceName": "Olog-Hai",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 0,
+        "hardenedLeather": 0,
+        "mail": 0,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 0,
+        "twoHanded": 5,
+        "throw": 2,
+        "aim": 0,
+        "pole": 0
+      },
+      "general": {
+        "climb": 1,
+        "mount": 0,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 5,
+        "sight": 1
+      }
+    },
+    "startSpellChance": 0,
+    "languages": 2,
+    "historyPoints": 1,
+    "stats": {
+      "STR": 20,
+      "AGI": -5,
+      "CON": 15,
+      "INT": -5,
+      "I": -10,
+      "PRE": -10
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 20,
+      "ILL": 10
+    }
+  },
+  {
+    "raceName": "Medio Trolls",
+    "startingRanks": {
+      "armor": {
+        "noArmor": 1,
+        "leather": 1,
+        "hardenedLeather": 2,
+        "mail": 3,
+        "plates": 0
+      },
+      "weapons": {
+        "edge": 0,
+        "blunt": 0,
+        "twoHanded": 4,
+        "throw": 2,
+        "aim": 0,
+        "pole": 0
+      },
+      "general": {
+        "climb": 1,
+        "mount": 0,
+        "swim": 0,
+        "trace": 0
+      },
+      "survival": {
+        "ambus": 0,
+        "hide": 0,
+        "lockPick": 0,
+        "trapDismantle": 0
+      },
+      "magic": {
+        "readRunes": 0,
+        "useObject": 0,
+        "spellAim": 0
+      },
+      "other": {
+        "health": 4,
+        "sight": 0
+      }
+    },
+    "startSpellChance": 0,
+    "languages": 2,
+    "historyPoints": 2,
+    "stats": {
+      "STR": 10,
+      "AGI": -5,
+      "CON": 10,
+      "INT": -5,
+      "I": -5,
+      "PRE": -5
+    },
+    "resistances": {
+      "ESE": 0,
+      "CAN": 0,
+      "VE": 15,
+      "ILL": 5
+    }
+  }
+]
