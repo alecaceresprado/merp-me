@@ -2,6 +2,12 @@
   "name": "merp-me",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -14,17 +20,10 @@
     "lerna": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2"
-  },
-  "scripts": {
-    "bootstrap": "lerna bootstrap --hoist",
-    "build": "lerna run build --stream",
-    "start:frontend": "lerna run start --stream --scope=@merp-me/frontend",
-    "build:frontend": "lerna run build --stream --scope=@merp-me/frontend",
-    "test:frontend": "lerna run test --stream --scope=@merp-me/frontend",
-    "eject:frontend": "lerna run eject --stream --scope=@merp-me/frontend"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.8",
     "commitlint": "^13.1.0",
     "sass": "^1.37.5",
     "sass-loader": "^12.1.0"

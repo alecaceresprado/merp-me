@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField } from '@material-ui/core';
 
 import styles from './styles';
-import { Stats, statsMapping } from '../../../types';
+import { Stats, statsMapping } from '../../types';
 
 const Character = ({ stats }: { stats: Stats }): React.ReactElement => {
   const classes = styles();

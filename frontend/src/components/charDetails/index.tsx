@@ -3,8 +3,8 @@ import Box from '@material-ui/core/Box';
 import { TextField } from '@material-ui/core';
 
 import styles from './styles';
-import CharStats from '../charStats/CharStats';
-import { Belor } from '../../../mocks';
+import CharStats from '../charStats';
+import { Belor } from '../../mocks';
 
 
 const CharDetails = (): React.ReactElement => {
