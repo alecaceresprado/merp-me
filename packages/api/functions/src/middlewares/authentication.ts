@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import * as admin from "firebase-admin";
+import {auth, db} from "../firebaseHelpers";
 
 export const authMiddleware =
   (req: Request, res: Response, next: () => void) => {
@@ -9,10 +9,10 @@ export const authMiddleware =
     console.log("authMiddleware:: Started");
     if (authHeader && authHeader.startsWith("Bearer ")) {
       idToken = authHeader.split("Bearer ")[1];
-      admin.auth().verifyIdToken(idToken)
+      auth.verifyIdToken(idToken)
         .then((decodedToken) => {
           userId = decodedToken.uid;
-          return admin.firestore().doc(`/users/${userId}`).get();
+          return db.doc(`/users/${userId}`).get();
         })
         .then((user) => {
           console.log("authMiddleware:: Finished");

@@ -1,6 +1,12 @@
 
 import {Router, Request, Response} from "express";
-import {db} from "../firebaseHelpers";
+import BusBoy = require("busboy");
+import path = require("path");
+import os = require("os");
+import fs = require("fs");
+
+import {db, storage} from "../firebaseHelpers";
+import {firebaseConfig} from "../__secure";
 
 
 const router: Router = Router();
@@ -22,7 +28,6 @@ router.get("/",
       })
       .catch(console.error);
   });
-
 
 router.post("/",
   (request: Request, response: Response) => {
@@ -103,4 +108,79 @@ router.delete("/:id",
       });
   });
 
+// Upload character image
+router.post("/image/:id", (request, response) => {
+  let imgToBeUploaded = {
+    filePath: "",
+    mimeType: "",
+    fileName: "",
+  };
+  let limitReached = false;
+  const characterId = request.params.id;
+  const busboy = new BusBoy({
+    headers: request.headers,
+    limits: {
+      // max fileSize in bytes (3MB)
+      fileSize: (3 * 1024 * 1024),
+    },
+  });
+
+  busboy.on("file", (_, file, fileName, __, mimeType) => {
+    if (!mimeType.startsWith("image")) {
+      response.status(400).json({error: "wrong file type submited"});
+    } else {
+      const imgExt = fileName.split(".").pop();
+      const imgFileName = `${request.params.id}.${imgExt}`;
+      const filePath = path.join(os.tmpdir(), imgFileName);
+      imgToBeUploaded = {
+        filePath,
+        mimeType,
+        fileName: imgFileName,
+      };
+      file.pipe(fs.createWriteStream(filePath));
+
+      // If the file is larger than the set limit
+      // delete partially uploaded file
+      file.on("limit", function() {
+        fs.unlink(filePath, function() {
+          limitReached = true;
+          response.status(455).json({error: "File to big, Limit: 3MB"});
+        });
+      });
+    }
+  });
+
+  busboy.on("finish", () => {
+    const {
+      fileName,
+      filePath,
+      mimeType,
+    } = imgToBeUploaded;
+    if (!limitReached) {
+      storage.bucket().deleteFiles({prefix: request.params.id, force: true})
+        .then(() => {
+          storage.bucket().upload(filePath, {
+            resumable: false,
+            metadata: {
+              metadata: {
+                contentType: mimeType,
+              },
+            },
+          });
+        })
+        .then(() => {
+          const imgUrl = `https://firebasestorage.googleapis.com/v0/b.${firebaseConfig.storageBucket}/o/${fileName}?alt=media`;
+          return db.doc(`/characters/${characterId}`).update({imgUrl});
+        })
+        .then(() => {
+          return response.json({message: "Image uploaded successfully"});
+        })
+        .catch((err) => {
+          console.error(err);
+          return response.status(500).json({error: err.code});
+        });
+    }
+  });
+  busboy.end((request as any).rawBody);
+});
 export default router;

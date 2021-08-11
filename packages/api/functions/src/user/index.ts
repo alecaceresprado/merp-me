@@ -8,7 +8,7 @@ import {validateLoginData, validateSignupData} from "./validations";
 
 const router: Router = Router();
 
-
+// Get user details
 router.get("/:userId", (request, response) => {
   const userId = request.params.userId;
   console.log("GET USER:: Started");
@@ -28,6 +28,7 @@ router.get("/:userId", (request, response) => {
     });
 });
 
+// Signup new user
 router.post("/", (request, response) => {
   console.log("CREATE USER:: Started");
   const newUser: signupDetails = {
@@ -79,6 +80,7 @@ router.post("/", (request, response) => {
     });
 });
 
+// Login user
 router.post("/login", (request, response) => {
   console.log("LOGIN USER:: Started");
   const user: loginDetails = {
