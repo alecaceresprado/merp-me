@@ -14,7 +14,9 @@ const router: Router = Router();
 router.get("/",
   (request, response) => {
     console.log("GET CHARACTERS:: Started");
-    db.collection("characters").get()
+    db.collection("characters")
+      .where("owner", "==", (request as any).user.userId)
+      .get()
       .then((data) => {
         const characters: any = [];
         data.forEach((doc) => {

@@ -3,14 +3,15 @@ import {Router} from "express";
 import firebase from "firebase";
 
 import {db} from "../firebaseHelpers";
-import {loginDetails, signupDetails} from "./types";
+import {authMiddleware} from "../middlewares";
+import {loginDetails, signupDetails, userDBObject} from "./types";
 import {validateLoginData, validateSignupData} from "./validations";
 
 const router: Router = Router();
 
 // Get user details
-router.get("/:userId", (request, response) => {
-  const userId = request.params.userId;
+router.get("/", authMiddleware, (request, response) => {
+  const userId = (request as any).user.userId;
   console.log("GET USER:: Started");
   db.doc(`/users/${userId}`).get()
     .then((res) => {
@@ -38,7 +39,7 @@ router.post("/", (request, response) => {
     userName: request.body.userName,
   };
   let createdUser: firebase.User | null;
-
+  let user: userDBObject;
 
   const {valid, errors} = validateSignupData(newUser);
 
@@ -48,14 +49,16 @@ router.post("/", (request, response) => {
     .createUserWithEmailAndPassword(newUser.email, newUser.password)
     .then((data) => {
       createdUser = data.user;
+      user = {
+        userName: request.body.userName,
+        email: request.body.email,
+        userId: createdUser?.uid || "",
+        createdAt: new Date().toISOString(),
+      };
+
       return db
         .doc(`/users/${createdUser?.uid}`)
-        .set({
-          userName: request.body.userName,
-          email: request.body.email,
-          userId: createdUser?.uid,
-          createdAt: new Date().toISOString(),
-        });
+        .set(user);
     })
     .then(() => {
       return createdUser?.getIdToken();
@@ -64,9 +67,7 @@ router.post("/", (request, response) => {
       console.log("CREATE USER:: Completed");
       return response
         .status(201)
-        .json({
-          token,
-        });
+        .json({user, token});
     })
     .catch((err) => {
       console.error(err);
@@ -83,6 +84,8 @@ router.post("/", (request, response) => {
 // Login user
 router.post("/login", (request, response) => {
   console.log("LOGIN USER:: Started");
+  let userId: string | undefined;
+  let token: string | undefined;
   const user: loginDetails = {
     email: request.body.email,
     password: request.body.password,
@@ -94,21 +97,34 @@ router.post("/login", (request, response) => {
 
   return firebase.auth().signInWithEmailAndPassword(user.email, user.password)
     .then((data) => {
+      userId = data.user?.uid;
       return data.user?.getIdToken();
     })
-    .then((token) => {
+    .then((userToken) => {
+      token = userToken;
+      return db.doc(`/users/${userId}`).get();
+    })
+    .then((userResponse) => {
+      const user = userResponse.data();
       console.log("LOGIN USER:: Completed");
-      return response.status(200).json({token});
+      return response.status(200).json({token, user});
     })
     .catch((err) => {
       console.error(err);
-      if (err.code === "auth/wrong-password") {
-        return response
-          .status(403)
-          .json({general: "Invalid credentials, please retry"});
-      } else {
-        return response.status(500).json({error: err.code});
+      let message = {};
+      switch (err.code) {
+      case "auth/wrong-password":
+        message = {password: "Wrong password!"};
+        break;
+      case "auth/user-not-found":
+        message = {email: "This email is not registered"};
+        break;
+      default:
+        message = {general: "Something went wrong, please retry"};
       }
+      return response
+        .status(403)
+        .json(message);
     });
 });
 

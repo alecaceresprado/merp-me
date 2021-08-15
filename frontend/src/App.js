@@ -1,10 +1,13 @@
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-import grey from '@material-ui/core/colors/grey';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import store from './store/store';
 
 import styles from './styles';
 
 import NavBar from './components/navBar';
+import AuthRoute from './components/authRoute';
 
 import Character from './pages/character';
 import HomePage from './pages/homePage';
@@ -30,17 +33,19 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Router>
-          <NavBar />
-          <div className={"appContainer"}>
-            <Switch>
-              <Route path="/character" component={Character} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
-              <Route path="/" component={HomePage} />
-            </Switch>
-          </div>
-        </Router>
+        <Provider store={store}>
+          <Router>
+            <NavBar />
+            <div className={"appContainer"}>
+              <Switch>
+                <AuthRoute path="/character" component={Character} />
+                <Route path="/signup" component={Signup} />
+                <Route path="/login" component={Login} />
+                <Route path="/" component={HomePage} />
+              </Switch>
+            </div>
+          </Router>
+        </Provider>
       </ThemeProvider>
     </div>
   );
