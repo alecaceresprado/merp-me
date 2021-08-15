@@ -13,22 +13,24 @@ const MerpRoutes = ({ component: Component, ...rest }: { component: any }): Reac
   const dispatch = useAppDispatch();
   const user = useAppSelector(store => store.user);
   useEffect(() => {
-    console.log('inside useEffect')
     const encoded = localStorage.getItem('AuthToken');
+    // I have a token
     if (encoded) {
       const token: JwtPayload = jwtDecode(encoded);
-      console.log(token)
+      // The token is expired
       if (token.exp && token.exp * 1000 < Date.now()) {
         window.location.href = '/login';
+        // the token is fine
       } else {
-        if (user?.userDetails?.userName) {
-        } else {
+        // There is no user details
+        if (!user?.userDetails?.userName) {
           axios.defaults.headers.common['authorization'] = encoded;
           dispatch(setIsPassiveLoading(true));
           axios.get('/user')
             .then(result => {
               dispatch(setUserDetails(result.data));
             })
+            // Fetch user fails
             .catch(() => {
               window.location.href = '/login';
             })
@@ -37,6 +39,8 @@ const MerpRoutes = ({ component: Component, ...rest }: { component: any }): Reac
             })
         }
       }
+    } else {
+      window.location.href = '/login';
     }
   }, []);
 
