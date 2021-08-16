@@ -13,10 +13,19 @@ interface loginErrors {
   general?: string
 };
 
+interface signupErrors {
+  email?: string;
+  password?: string;
+  confirmPassword?: string;
+  userName?: string;
+  general?: string
+};
+
 
 export interface userState {
   userDetails?: userDetails;
-  loginErrors?: loginErrors
+  loginErrors?: loginErrors;
+  signupErrors?: signupErrors;
 };
 
 const initialState: userState = {
@@ -35,10 +44,23 @@ export const userSlice = createSlice({
         loginErrors: {},
       };
     },
+    unsetUserDetails: () => {
+      return {
+        loginErrors: {},
+      };
+    },
     setLoginErrors: (state, action: PayloadAction<loginErrors>) => {
       return {
         ...state,
         loginErrors: {
+          ...action.payload
+        }
+      };
+    },
+    setSignupErrors: (state, action: PayloadAction<signupErrors>) => {
+      return {
+        ...state,
+        signupErrors: {
           ...action.payload
         }
       };
@@ -48,7 +70,7 @@ export const userSlice = createSlice({
 });
 
 
-export const { setUserDetails, setLoginErrors } = userSlice.actions;
+export const { setUserDetails, setLoginErrors, unsetUserDetails, setSignupErrors } = userSlice.actions;
 
 export default userSlice.reducer;
 

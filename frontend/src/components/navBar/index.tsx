@@ -9,22 +9,33 @@ import { CircularProgress } from '@material-ui/core';
 
 import styles from './styles';
 import { Belor } from '../../mocks';
-import { useAppSelector } from '../../store/hooks';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+
 import { getUi } from '../../store/uiReducer';
+import { getUser } from '../../store/userReducer';
+import { logout } from '../../helpers';
 
 
 const CharDetails = (): React.ReactElement => {
   const classes = styles();
   const character = Belor;
   const { passiveLoading } = useAppSelector(getUi);
+  const { userDetails } = useAppSelector(getUser);
+  const dispatch = useAppDispatch();
+  const doLogout = () => {
+    logout(dispatch)
+  }
+  const loginLogout = userDetails?.userId ?
+    <Button color="inherit" onClick={doLogout} component={Link} to="/login">Logout</Button> :
+    <Button color="inherit" component={Link} to="/login">login</Button>
 
   return (
     <AppBar >
       <Toolbar className={classes.toolbar}>
         {passiveLoading && <CircularProgress size={30} color="inherit" />}
         <Button color="inherit" component={Link} to="/">Home</Button>
-        <Button color="inherit" component={Link} to="/login">Login</Button>
-        <Button color="inherit" component={Link} to="/signup">signUp</Button>
+        {loginLogout}
+        {!userDetails?.userId && <Button color="inherit" component={Link} to="/signup">signUp</Button>}
       </Toolbar>
     </AppBar>
   );

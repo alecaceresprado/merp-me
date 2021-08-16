@@ -9,14 +9,17 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { useAppDispatch } from '../../store/hooks';
-import { setUserDetails } from '../../store/userReducer';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { getUser, setSignupErrors, setUserDetails } from '../../store/userReducer';
 import { login } from '../../helpers';
 import axios from 'axios';
+import { getUi, setIsActionLoading } from '../../store/uiReducer';
 
 const Signup = (): React.ReactElement => {
   const history = useHistory();
   const dispatch = useAppDispatch();
+  const { signupErrors } = useAppSelector(getUser);
+  const { actionLoading } = useAppSelector(getUi);
   const classes = styles();
   const [signupData, setSignupData] = useState({
     email: '',
@@ -24,19 +27,9 @@ const Signup = (): React.ReactElement => {
     password: '',
     confirmPassword: ''
   })
-  const [loading, setLoading] = useState(false)
-  const [errors, setErrors] = useState<
-    { 
-      email?: string,
-      userName?: string,
-      password?: string, 
-      confirmPassword?: string, 
-      general?: string 
-    }
-  >({});
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setLoading(true);
+    dispatch(setIsActionLoading(true));
     axios.post('/user', signupData)
       .then(result => {
         login(result.data.token);
@@ -45,26 +38,26 @@ const Signup = (): React.ReactElement => {
       })
       .catch(error => {
         if (error?.response?.data && typeof error.response.data !== 'string') {
-          setErrors(error.response.data);
+          dispatch(setSignupErrors(error.response.data));
         } else {
-          setErrors({ general: "Something went wrong! please retry" });
+          dispatch(setSignupErrors({ general: "Something went wrong! please retry" }));
         }
       })
       .finally(() => {
-        setLoading(false);
+        dispatch(setIsActionLoading(false));
       });
   };
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setSignupData({
-      ...signupData, 
+      ...signupData,
       [name]: value
     })
   }
 
   const isBtnDisabled = (): boolean => (
-    loading || !Object.values(signupData).every(field => field.length)
+    actionLoading || !Object.values(signupData).every(field => field.length)
   );
 
   return (
@@ -79,14 +72,14 @@ const Signup = (): React.ReactElement => {
           </Typography>
         </div>
         <form noValidate className={`${classes.form}`} onSubmit={handleSubmit}>
-        <TextField
+          <TextField
             id="email"
             name="email"
             type="email"
             label="Email"
             className={`${classes.formInput}`}
-            helperText={errors.email}
-            error={!!errors.email}
+            helperText={signupErrors?.email}
+            error={!!signupErrors?.email}
             value={signupData.email}
             onChange={handleChange}
             fullWidth
@@ -97,8 +90,8 @@ const Signup = (): React.ReactElement => {
             type="text"
             label="userName"
             className={`${classes.formInput}`}
-            helperText={errors.userName}
-            error={!!errors.userName}
+            helperText={signupErrors?.userName}
+            error={!!signupErrors?.userName}
             value={signupData.userName}
             onChange={handleChange}
             fullWidth
@@ -109,8 +102,8 @@ const Signup = (): React.ReactElement => {
             type="password"
             label="Password"
             className={`${classes.formInput}`}
-            helperText={errors.password}
-            error={!!errors.password}
+            helperText={signupErrors?.password}
+            error={!!signupErrors?.password}
             value={signupData.password}
             onChange={handleChange}
             fullWidth
@@ -121,15 +114,15 @@ const Signup = (): React.ReactElement => {
             type="password"
             label="confirm password"
             className={`${classes.formInput}`}
-            helperText={errors.confirmPassword}
-            error={!!errors.confirmPassword}
+            helperText={signupErrors?.confirmPassword}
+            error={!!signupErrors?.confirmPassword}
             value={signupData.confirmPassword}
             onChange={handleChange}
             fullWidth
           />
-          {errors.general && (
+          {signupErrors?.general && (
             <Typography variant="body2" className={`${classes.generalError}`}>
-              {errors.general}
+              {signupErrors?.general}
             </Typography>
           )}
           <Button
@@ -139,9 +132,9 @@ const Signup = (): React.ReactElement => {
             className={`${classes.loginButton}`}
             disabled={isBtnDisabled()}
           >
-            {loading ? (<CircularProgress size={30} />) : "Signup"}
+            {actionLoading ? (<CircularProgress size={30} />) : "Signup"}
           </Button>
-          <br /> 
+          <br />
           <small>
             Already have an account ? Login {<Link to="/signup">here</Link>}
           </small>
