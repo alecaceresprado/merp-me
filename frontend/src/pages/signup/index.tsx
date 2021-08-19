@@ -136,7 +136,7 @@ const Signup = (): React.ReactElement => {
           </Button>
           <br />
           <small>
-            Already have an account ? Login {<Link to="/signup">here</Link>}
+            Already have an account ? Login {<Link to="/login">here</Link>}
           </small>
         </form>
       </Card>

@@ -1,10 +1,26 @@
 import { makeStyles } from "@material-ui/core";
 
 export default makeStyles({
-  box: {
-    'border-style': 'groove',
-  },
   container: {
-    padding: '0.25rem'
+    marginTop: "5rem",
+    padding: '0.25rem',
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "nowrap",
+    alignContent: "center",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  charactersContainer: {
+    marginTop: '5rem',
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignContent: 'space-around',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    width: '100%',
+  },
+  spinner: {
+    marginTop: '5rem'
   }
 });

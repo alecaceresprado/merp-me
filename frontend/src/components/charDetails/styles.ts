@@ -1,20 +1,33 @@
 import { makeStyles } from "@material-ui/core";
 
+import {theme} from '../../theme'
+
 export default makeStyles({
   container: {
-    'display': 'flex',
-    'flex-direction': 'row',
-    'flex-wrap': 'nowrap',
-    'align-content': 'center',
-    'justify-content': 'space-between',
-    'padding': '0.25rem'
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    alignContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '0.25rem',
+    [theme.breakpoints.down('xs')]: {
+      flexWrap: 'wrap',
+      flexDirection: 'column'
+    },
   },
   details: {
-    width: '40%'
+    width: '40%',
+    [theme.breakpoints.down('xs')]: {
+      width: '60%'
+    },
   }, portrait: {
-    width: '20%'
+    width: '20%', 
+    margin: '2rem'
   }, stats: {
-    width: '40%'
+    width: '40%',
+    display: 'flex', 
+    justifyContent: 'flex-end'
   },
   row: {
     'display': 'flex',

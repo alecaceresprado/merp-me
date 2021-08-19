@@ -67,7 +67,7 @@ const Login = (): React.ReactElement => {
             Welcome back, Traveler!
           </Typography>
           <Typography variant="h6">
-            Please, remind this old inkeeper your name
+            Please, remind this old innkeeper your name
           </Typography>
         </div>
         <form noValidate className={`${classes.form}`} onSubmit={handleSubmit}>

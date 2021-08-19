@@ -4,6 +4,7 @@ import BusBoy = require("busboy");
 import path = require("path");
 import os = require("os");
 import fs = require("fs");
+import {uuid} from "uuidv4";
 
 import {db, storage} from "../firebaseHelpers";
 import {firebaseConfig} from "../__secure";
@@ -119,6 +120,7 @@ router.post("/image/:id", (request, response) => {
   };
   let limitReached = false;
   const characterId = request.params.id;
+  const generatedToken = uuid();
   const busboy = new BusBoy({
     headers: request.headers,
     limits: {
@@ -166,12 +168,13 @@ router.post("/image/:id", (request, response) => {
             metadata: {
               metadata: {
                 contentType: mimeType,
+                firebaseStorageDownloadTokens: generatedToken,
               },
             },
           });
         })
         .then(() => {
-          const imgUrl = `https://firebasestorage.googleapis.com/v0/b.${firebaseConfig.storageBucket}/o/${fileName}?alt=media`;
+          const imgUrl = `https://firebasestorage.googleapis.com/v0/b/${firebaseConfig.storageBucket}/o/${fileName}?alt=media&token=${generatedToken}`;
           return db.doc(`/characters/${characterId}`).update({imgUrl});
         })
         .then(() => {
